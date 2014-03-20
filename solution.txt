@@ -1,0 +1,30 @@
+Bryan Gawinski
+
+My Approach:
+
+I have two functions that handle all the work of solving each puzzle where the solve funcion 
+iterates a certain number of times in order to get the right moves to solve the puzzle using 
+a random number for where you are looking at on the board for your move.
+
+The getBoard function sets up the board to be used for each position that is missing a peg at 
+first, iterates 10,000 times to try and solve the puzzle for each board and if it gets solved,
+then the necessary information is printed
+
+I used a mix of a methodical approach with some randomness in order to solve the board using a for 
+loop to step through the map of possible moves and a while loop for the iterations in the solve 
+function. A for loop was used for the iterations in the getBoard function.
+
+
+Data Structure Description:
+- boardSpaces = Map with key of an int and value of boolean to indicate which spaces on the board are occupied called
+  boardSpaces
+
+- possibleMoves = Map with a key of an int and value of a vector that contains int variables.  The key 
+  indicated the starting position of the move while the vector contained the position it was 
+  jumping to and what it needed to jump over to get there.
+
+- pos0 through 14 = 15 vectors were used for each the possible moves from each position on the board that would 
+  be added to the possibleMoves map
+
+- madeMoves = a vector that contained all the moves made for the solved puzzle where the 
+  position the peg jumped from is added and then the peg jumped over
